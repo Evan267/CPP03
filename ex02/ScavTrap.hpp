@@ -6,7 +6,7 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 14:55:33 by eberger           #+#    #+#             */
-/*   Updated: 2023/06/06 19:05:22 by eberger          ###   ########.fr       */
+/*   Updated: 2023/08/16 12:50:34 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,10 @@ public:
 
 private:
 	void	_setName(std::string name);
-	void	_setHitPoints(int value);
-	void	_setEnergyPoints(int value);
-	void	_setAttackDamage(int value);
+	void	_setHitPoints(unsigned int value);
+	void	_setEnergyPoints(unsigned int value);
+	void	_setAttackDamage(unsigned int value);
+	int		_invincible;
 
 };
 

@@ -6,7 +6,7 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 14:55:33 by eberger           #+#    #+#             */
-/*   Updated: 2023/06/06 18:47:05 by eberger          ###   ########.fr       */
+/*   Updated: 2023/08/16 12:12:01 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ private:
 	void	_setHitPoints(unsigned int value);
 	void	_setEnergyPoints(unsigned int value);
 	void	_setAttackDamage(unsigned int value);
+	int		_invincible;
 
 };
 

@@ -6,7 +6,7 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 19:21:14 by eberger           #+#    #+#             */
-/*   Updated: 2023/06/06 20:08:22 by eberger          ###   ########.fr       */
+/*   Updated: 2023/08/16 14:13:05 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ public:
 	~DiamondTrap(void);
 	DiamondTrap&	operator=(const DiamondTrap &obj);
 	void	attack(const std::string &target);
+	void	whoAmI(void);
 
 private:
 	

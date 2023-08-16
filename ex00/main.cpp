@@ -6,7 +6,7 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 16:29:35 by eberger           #+#    #+#             */
-/*   Updated: 2023/06/05 17:09:06 by eberger          ###   ########.fr       */
+/*   Updated: 2023/08/16 11:02:43 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,15 @@ int	main(void)
 	a.attack("TEST");
 	a.beRepaired(5);
 	a.attack("TEST");
+	b.attack("TEST");
+	b.attack("TEST");
+	b.attack("TEST");
+	b.attack("TEST");
+	b.attack("TEST");
+	b.attack("TEST");
+	b.attack("TEST");
+	b.attack("TEST");
+	b.attack("TEST");
+	b.attack("TEST");
+	return (0);
 }

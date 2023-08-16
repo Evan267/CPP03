@@ -6,13 +6,13 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 16:38:42 by eberger           #+#    #+#             */
-/*   Updated: 2023/06/06 18:35:45 by eberger          ###   ########.fr       */
+/*   Updated: 2023/08/16 12:25:38 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(void)
+ScavTrap::ScavTrap(void) : _invincible(0)
 {
 	std::cout << "ScavTrap default constructor called" << std::endl;
 	this->_setName("");
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap(void)
 	return ;
 }
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name) : _invincible(0)
 {
 	std::cout << "ScavTrap constructor called with name" << std::endl;
 	this->_setName(name);
@@ -81,8 +81,21 @@ void	ScavTrap::attack(const std::string &target)
 
 void	ScavTrap::guardGate(void)
 {
-	std::cout << "ScavTrap has switched to Gate keeper mode"
-		<< std::endl;
+	this->_invincible = !(this->_invincible);
+	if (this->_invincible)
+	{
+		std::cout << "ScavTrap "
+			<< this->_name
+			<< " Gate keeper mode on"
+			<< std::endl;
+	}
+	else
+	{
+		std::cout << "ScavTrap "
+			<< this->_name
+			<< " Gate keeper mode off"
+			<< std::endl;
+	}
 }
 
 void	ScavTrap::_setAttackDamage(unsigned int value)

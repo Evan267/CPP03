@@ -6,7 +6,7 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:50:44 by eberger           #+#    #+#             */
-/*   Updated: 2023/06/06 19:37:43 by eberger          ###   ########.fr       */
+/*   Updated: 2023/08/16 13:41:35 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,17 @@ FragTrap&	FragTrap::operator=(const FragTrap &obj)
 
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "High Fives Guys" << std::endl;
+	std::string	request;
+
+	while (request.compare("y") && request.compare("n"))
+	{
+		std::cout << "High Fives Guys (y/n) : ";
+		std::cin >> request;
+	}
+	if (request.compare("y") == 0)
+		std::cout << "Yeeaaaahhh" << std::endl;
+	else if (request.compare("n") == 0)
+		std::cout << "Zuuut" << std::endl;
 }
 
 void	FragTrap::_setAttackDamage(int value)

@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FlagTrap.cpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:50:44 by eberger           #+#    #+#             */
-/*   Updated: 2023/06/06 19:24:42 by eberger          ###   ########.fr       */
+/*   Updated: 2023/08/16 13:41:35 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(void)
-{
+FragTrap::FragTrap(void): ClapTrap(){
 	std::cout << "FragTrap default constructor called" << std::endl;
-	this->_setName("");
 	this->_setHitPoints(100);
 	this->_setEnergyPoints(50);
 	this->_setAttackDamage(20);
 	return ;
 }
 
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string name): ClapTrap(name)
 {
 	std::cout << "FragTrap constructor called with name" << std::endl;
-	this->_setName(name);
 	this->_setHitPoints(100);
 	this->_setEnergyPoints(50);
 	this->_setAttackDamage(20);
@@ -59,7 +56,17 @@ FragTrap&	FragTrap::operator=(const FragTrap &obj)
 
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "High Fives Guys" << std::endl;
+	std::string	request;
+
+	while (request.compare("y") && request.compare("n"))
+	{
+		std::cout << "High Fives Guys (y/n) : ";
+		std::cin >> request;
+	}
+	if (request.compare("y") == 0)
+		std::cout << "Yeeaaaahhh" << std::endl;
+	else if (request.compare("n") == 0)
+		std::cout << "Zuuut" << std::endl;
 }
 
 void	FragTrap::_setAttackDamage(int value)

@@ -6,7 +6,7 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 19:19:43 by eberger           #+#    #+#             */
-/*   Updated: 2023/06/06 20:27:07 by eberger          ###   ########.fr       */
+/*   Updated: 2023/08/16 14:13:45 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,10 @@ DiamondTrap&	DiamondTrap::operator=(const DiamondTrap &obj)
 void	DiamondTrap::attack(const std::string &target)
 {
 	ScavTrap::attack(target);
+}
+
+void	DiamondTrap::whoAmI(void)
+{
 }
 
 void	DiamondTrap::_setAttackDamage(int value)

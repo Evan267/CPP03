@@ -6,7 +6,7 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:50:59 by eberger           #+#    #+#             */
-/*   Updated: 2023/06/06 20:18:05 by eberger          ###   ########.fr       */
+/*   Updated: 2023/06/06 19:33:05 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FLAGTRAP_HPP
 # include "ClapTrap.hpp"
 
-class FragTrap : virtual public ClapTrap {
+class FragTrap : public ClapTrap {
 
 public:
 
